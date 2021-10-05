@@ -28,5 +28,10 @@ resource "azurerm_kubernetes_cluster" "aks" {
   tags = {
     Environment = "Test"
   }
+  addon_profile {
+    azure_policy {
+      enabled = true
+    }
+  }
 }
 
